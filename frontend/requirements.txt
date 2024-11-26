@@ -1,0 +1,13 @@
+npm create vite@latest
+
+pip install node
+pip install npm
+
+npm install
+npm run dev
+
+npm  install -D tailwindcss postcss autoprefixer
+npm install tailwindcss init -p
+npm install antd --save
+npm install axios
+npm install prop-types
