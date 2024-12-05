@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e19f344e-bbef-4a5a-a70b-3e147efd29c1" name="Changes" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/auth_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/auth_router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/celery_tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/celery_tasks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +95,7 @@
       <workItem from="1732199693106" duration="596000" />
       <workItem from="1732383338879" duration="218000" />
       <workItem from="1732638700080" duration="25000" />
-      <workItem from="1733403241352" duration="1337000" />
+      <workItem from="1733403241352" duration="2126000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <option name="closed" value="true" />

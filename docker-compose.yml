@@ -72,7 +72,7 @@ services:
       - app-network
     depends_on:
       - redis
-      -
+
   flower:
     image: mher/flower
     ports:
