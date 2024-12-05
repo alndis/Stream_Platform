@@ -25,7 +25,7 @@ def send_confirmation_email(email: str, token: str):
             message = MessageSchema(
                 subject="Email Confirmation",
                 recipients=[email],
-                body=f"Please confirm your email by clicking the following link: http://<your-host>/api/auth/confirm/{token}",
+                body=f"Please confirm your email by clicking the following link: http://176.123.167.118:8000/api/auth/confirm/{token}",
                 subtype="html"
             )
             fm = FastMail(conf)
