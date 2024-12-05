@@ -5,6 +5,7 @@ from passlib.context import CryptContext
 from datetime import datetime, timedelta
 import jwt
 from redis import Redis
+from email_validator import validate_email, EmailNotValidError
 
 from templates import templates
 from schemas import UserCreate, User, Token
@@ -39,6 +40,12 @@ def create_jwt_token(user: User):
 @router.post("/register")
 async def register(user: UserCreate):
     try:
+        # Проверка корректности email
+        try:
+            validate_email(user.email)
+        except EmailNotValidError as e:
+            raise HTTPException(status_code=400, detail=f"Invalid email: {str(e)}")
+
         existing_user = await UserRepository.get_user_by_username(user.username)
         if existing_user:
             raise HTTPException(status_code=400, detail="Пользователь с таким именем уже существует")
@@ -59,7 +66,6 @@ async def register(user: UserCreate):
         return {"message": "Пользователь успешно зарегистрирован. Проверьте свою почту для подтверждения."}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
 @router.get("/confirm/{token}", response_class=HTMLResponse)
 async def confirm_email(token: str, request: Request):
     print(f"Received token: {token}")  # Для отладки
